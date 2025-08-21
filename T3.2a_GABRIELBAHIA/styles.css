@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(45deg, rgb(26, 57, 84), rgb(49, 28, 69));
+    font-family: 'Spartan', sans-serif;
+}
+
+button {
+    margin-top: 1rem;
+    width: 7.6rem;
+    height: 2.5rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#starting-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 60%;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 32px 0 rgba(21, 103, 128, 0.25);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 768px) {
+    #starting-screen {
+      width: 80%; 
+    }
+    #starting-screen #configurations {
+      flex-direction: column; 
+    }     
+}
+
+#starting-screen .game-title,
+#game-paused-screen .game-paused-content .game-paused-title,
+#stage-complete-screen .stage-complete-content .stage-complete-title, 
+#end-game-screen .end-game-content .end-game-title,
+#game-over-screen .game-over-content .game-over-title {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+
+    margin-bottom: 2rem;
+}
+
+#starting-screen #configurations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60%;
+    height: auto;
+    padding: 1rem;
+}
+
+#game-paused-screen,
+#stage-complete-screen, 
+#end-game-screen,
+#game-over-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+}
+
+#game-paused-screen .game-paused-content,
+#stage-complete-screen .stage-complete-content, 
+#end-game-screen .end-game-content,
+#game-over-screen .game-over-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#game-paused-screen .game-paused-content .buttons-container,
+#stage-complete-screen .stage-complete-content .buttons-container, 
+#end-game-screen .end-game-content .buttons-container,
+#game-over-screen .game-over-content .buttons-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-paused-screen .game-paused-content .buttons-container #restart-game {
+    margin-right: 1rem;
+}
+
+.launch-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 100%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-button {
+    position: absolute;
+    margin-top: 0;
+    top: 0.5rem;
+    left: 0.5rem;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.launch-button img,
+.fullscreen-button img {
+    pointer-events: none;
+    width: 80%;
+    height: 80%;
+}
+
+#lives-indicator-container {
+    visibility: hidden;
+    width: calc(5 * 2rem + 4 * 0.1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    gap: 0.1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    overflow: hidden;
+
+    transition: all 0.5s;
+}
+
+#lives-indicator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.1rem;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#lives-indicator img {
+    width: 2rem;
+    height: 2rem;
+}

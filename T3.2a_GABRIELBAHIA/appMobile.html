@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Brick Breaker</title>
+   <link rel="shortcut icon" href="../favicon.ico">
+   <link rel="stylesheet" href="../html/resources/default.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+</head>
+
+<body>
+   <!-- Import maps polyfill -- Remove this when import maps will be widely supported-->
+   <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+   <script type="importmap">
+         {"imports": {"three": "../build/three.module.js"}} 
+      </script>
+   <script type="module" src="appMobile.js"></script>
+   <link rel="stylesheet" href="./styles.css">      
+
+   <div id="webgl-output">
+      <div id="starting-screen">
+         <h1 class="game-title">Brick Breaker</h1>
+         <div id="configurations">
+            <button class="start-game" id="startButton">Start</button>
+         </div>
+      </div>
+      <div id="game-paused-screen">
+         <div class="game-paused-content">
+             <h1 class="game-paused-title">GAME PAUSED</h1>
+             <div class="buttons-container">
+                 <button id="restart-stage">Restart</button>
+             </div>
+         </div>
+     </div>
+     <div id="stage-complete-screen">
+         <div class="stage-complete-content">
+               <h1 class="stage-complete-title">STAGE COMPLETE</h1>
+               <div class="buttons-container">
+                  <button id="next-stage">Next Stage</button>
+               </div>
+         </div>
+      </div>
+      <div id="end-game-screen">
+         <div class="end-game-content">
+               <h1 class="end-game-title">YOU WON!</h1>
+               <div class="buttons-container">
+                  <button id="celebrate">Celebrate!</button>
+               </div>
+         </div>
+      </div>
+      <div id="game-over-screen">
+         <div class="game-over-content">
+               <h1 class="game-over-title">GAME OVER</h1>
+               <div class="buttons-container">
+                  <button id="restart-game">Restart</button>                  
+               </div>
+         </div>
+      </div>
+      <div id="lives-indicator-container">
+         <div id="lives-indicator">
+            <img src="./assets/heart-full.png" alt="coração cheio">
+            <img src="./assets/heart-full.png" alt="coração cheio">
+            <img src="./assets/heart-full.png" alt="coração cheio">
+            <img src="./assets/heart-full.png" alt="coração cheio">
+            <img src="./assets/heart-full.png" alt="coração cheio">
+            
+            <img src="./assets/heart-empty.png" alt="coração vazio">
+            <img src="./assets/heart-empty.png" alt="coração vazio">
+            <img src="./assets/heart-empty.png" alt="coração vazio">
+            <img src="./assets/heart-empty.png" alt="coração vazio">
+            <img src="./assets/heart-empty.png" alt="coração vazio">
+         </div>
+      </div>
+
+      <button id="launch" class="launch-button">
+         <img src="./assets/launch-ball-icon.png" alt="Bola">
+      </button>
+
+      <button id="fullscreen" class="fullscreen-button">
+         <img src="./assets/full-screen-icon.png" alt="Fullscreen">
+      </button>    
+   </div>
+   <audio id="collisionSoundBrick1" src="./assets/sounds/bloco1.mp3"></audio>
+   <audio id="collisionSoundBrick2" src="./assets/sounds/bloco2.mp3"></audio>
+   <audio id="collisionSoundPower" src="./assets/sounds/bloco3.mp3"></audio>
+   <audio id="collisionSoundHitter" src="./assets/sounds/rebatedor.mp3"></audio>
+</body>
+
+</html>
