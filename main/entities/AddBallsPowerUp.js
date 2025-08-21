@@ -3,7 +3,7 @@ import { Ball } from "./Ball.js";
 
 export class AddBallsPowerUp extends PowerUp {
     constructor(initialPosition) {
-        super(initialPosition, './assets/add-balls-power-up-texture.png');
+        super(initialPosition, './main/assets/add-balls-power-up-texture.png');
     }
 
     powerUpAction() {

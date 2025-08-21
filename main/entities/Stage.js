@@ -37,7 +37,7 @@ export class Stage {
         var linha = -38;
         var bricks = [];
         var textureLoader = new THREE.TextureLoader();
-        var brickTexture = textureLoader.load('./assets/textureBrick2.png');
+        var brickTexture = textureLoader.load('./main/assets/textureBrick2.png');
         for(var i = 0; i < this.rows; i++) {
             var coluna = -20;
             var arrayLinha = [];
@@ -78,7 +78,7 @@ export class Stage {
             [3, 0, 2, 5, 1, 4, 5, 3]
         ];
         var textureLoader = new THREE.TextureLoader();
-        var brickTexture = textureLoader.load('./assets/textureBrick2.png');
+        var brickTexture = textureLoader.load('./main/assets/textureBrick2.png');
     
         for (var i = 0; i < this.rows; i++) {
             var coluna = -16;
@@ -111,7 +111,7 @@ export class Stage {
 
     constructStage3() {
         var textureLoader = new THREE.TextureLoader();
-        var brickwall = textureLoader.load('./assets/texture-gold.png');
+        var brickwall = textureLoader.load('./main/assets/texture-gold.png');
 
         var brickIndex = 0;
         var linha = -38;

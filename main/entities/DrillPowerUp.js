@@ -9,7 +9,7 @@ export class DrillPowerUp extends PowerUp {
     static timeIntervalId = null;
 
     constructor(initialPosition) {
-        super(initialPosition, './assets/drill-power-up-texture.png');
+        super(initialPosition, './main/assets/drill-power-up-texture.png');
     }
 
     powerUpAction() {

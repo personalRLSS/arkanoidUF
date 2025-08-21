@@ -48,12 +48,12 @@ export class Background {
 
     createSkyBox(scene) {
         const urls = [
-            "./assets/skybox2/space_ft.png",
-            "./assets/skybox2/space_bk.png",
-            "./assets/skybox2/space_up.png",
-            "./assets/skybox2/space_dn.png",
-            "./assets/skybox2/space_rt.png",
-            "./assets/skybox2/space_lf.png"
+            "./main/assets/skybox2/space_ft.png",
+            "./main/assets/skybox2/space_bk.png",
+            "./main/assets/skybox2/space_up.png",
+            "./main/assets/skybox2/space_dn.png",
+            "./main/assets/skybox2/space_rt.png",
+            "./main/assets/skybox2/space_lf.png"
         ];
 
         let cubeMapTexture = new THREE.CubeTextureLoader().load(urls);

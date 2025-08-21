@@ -170,7 +170,7 @@ export class Ball {
         var listener = new THREE.AudioListener();
         var sound = new THREE.Audio( listener );  
         var audioLoader = new THREE.AudioLoader();
-        audioLoader.load('./assets/sounds/rebatedor.mp3', function( buffer ) {
+        audioLoader.load('./main/assets/sounds/rebatedor.mp3', function( buffer ) {
             sound.setBuffer( buffer );
             sound.setVolume(1);
             sound.play(); 

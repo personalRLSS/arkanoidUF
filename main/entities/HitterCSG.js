@@ -53,7 +53,7 @@ export class HitterCSG {
             loaded: false,
             bb: new THREE.Box3()
         }
-        this.loadGLBFile(asset, './assets/lego_spacecraft.glb', 8.0, scene);
+        this.loadGLBFile(asset, './main/assets/lego_spacecraft.glb', 8.0, scene);
     }
 
     loadGLBFile(asset, file, desiredScale, scene)
@@ -221,7 +221,7 @@ export class HitterCSG {
             0.0, 0.0];
 
         geometry.setAttribute('uv', new THREE.BufferAttribute(new Float32Array(uvCoords), 2));
-        let texture = new THREE.TextureLoader().load('./assets/texture-lego2.jpg');
+        let texture = new THREE.TextureLoader().load('./main/assets/texture-lego2.jpg');
         material.map = texture;
     }
 }

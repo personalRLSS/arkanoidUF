@@ -40,14 +40,14 @@ export class Brick {
             this.block.material.color.set(this.color);
             if(this.initialLife === 2){
                 var textureLoader = new THREE.TextureLoader();
-                var brickwall = textureLoader.load('./assets/textureBrick2.png');
+                var brickwall = textureLoader.load('./main/assets/textureBrick2.png');
                 let material = new THREE.MeshLambertMaterial({color: "lightgray"});
                 this.block.material = material;
                 this.block.material.map = brickwall;
             }
         } else {
             if(this.indestructible === 1){
-                audioLoader.load('./assets/sounds/bloco2.mp3', function( buffer ) {
+                audioLoader.load('./main/assets/sounds/bloco2.mp3', function( buffer ) {
                     sound.setBuffer( buffer );
                     sound.setVolume(1);
                     sound.play(); 
@@ -59,7 +59,7 @@ export class Brick {
                 this.block.material = material;
             }
             this.life -= 1;
-            audioLoader.load('./assets/sounds/bloco1.mp3', function( buffer ) {
+            audioLoader.load('./main/assets/sounds/bloco1.mp3', function( buffer ) {
                 sound.setBuffer( buffer );
                 sound.setVolume(1);
                 sound.play(); 
